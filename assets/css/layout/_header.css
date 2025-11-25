@@ -1,0 +1,2 @@
+.hero{min-height:70vh;display:flex;align-items:center;background-image:url('../img/hero-bg.webp');background-size:cover;background-position:center;padding-top:80px}
+.header-inner .brand-title{font-weight:700;margin-left:.6rem}
