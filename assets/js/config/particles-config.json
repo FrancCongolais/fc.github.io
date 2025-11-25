@@ -1,1 +1,14 @@
-{}
+{
+  "particle": {
+    "count": 120,
+    "minSize": 1,
+    "maxSize": 3,
+    "speed": 0.6,
+    "color": "rgba(0, 200, 255, 0.7)"
+  },
+  "link": {
+    "distance": 120,
+    "width": 1,
+    "color": "rgba(0, 150, 255, 0.25)"
+  }
+}
