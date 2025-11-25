@@ -1,0 +1,100 @@
+/* =========================== */
+/*  FC TOKEN – CARD COMPONENTS */
+/* =========================== */
+
+/* ---- Card Grid ---- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* ---- Card Base ---- */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
+}
+
+/* Glow on hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #00c6ff;
+    box-shadow: 0px 8px 30px rgba(0, 198, 255, 0.35);
+}
+
+/* 3D Floating effect */
+.card:active {
+    transform: scale(0.98);
+}
+
+/* ---- Card Title ---- */
+.card h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* ---- Card Text ---- */
+.card p {
+    color: #cfcfcf;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ---- Card Icon ---- */
+.card-icon {
+    width: 55px;
+    height: 55px;
+    padding: 12px;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00c6ff, #0066ff);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 198, 255, 0.5);
+}
+
+/* ---- Special Card Accent (e.g. for important features) ---- */
+.card.accent {
+    background: linear-gradient(145deg, rgba(0, 198, 255, 0.15), rgba(0, 102, 255, 0.12));
+    border-left: 4px solid #00c6ff;
+}
+
+.card.accent:hover {
+    box-shadow: 0px 12px 40px rgba(0, 198, 255, 0.45);
+}
+
+/* ---- Dark Theme Compatibility ---- */
+body.dark .card {
+    background: rgba(25, 25, 25, 0.45);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .card:hover {
+    border-color: #00c6ff;
+    box-shadow: 0px 8px 28px rgba(0, 198, 255, 0.35);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+}
