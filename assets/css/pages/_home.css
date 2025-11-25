@@ -1,0 +1,4 @@
+.hero-inner .lead{max-width:700px;margin:0 auto}
+.features{padding:3rem 0}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.feature-card{background:rgba(255,255,255,0.03);padding:1rem;border-radius:10px}
