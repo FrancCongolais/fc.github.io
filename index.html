@@ -1,89 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FC Token – Future Crypto Ecosystem</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Franc Congolais (FC) — Accueil</title>
+  <meta name="description" content="Franc Congolais (FC) — Souveraineté numérique de la RDC.">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Favicons (optionnel) -->
+  <link rel="icon" href="assets/img/logo/logo.svg" type="image/svg+xml">
 </head>
-
 <body>
-    <!-- ======== NAVBAR ======== -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/img/logo.svg" alt="FC Token" />
-            </a>
+  <!-- Canvas pour particles (z-index -1 via CSS) -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-            <nav class="nav-menu" id="nav-menu">
-                <a href="index.html">Accueil</a>
-                <a href="about.html">À propos</a>
-                <a href="tokenomics.html">Tokenomics</a>
-                <a href="roadmap.html">Roadmap</a>
-                <a href="ecosystem.html">Écosystème</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo/logo.svg" alt="FC Token" class="logo">
+        <span class="brand-title">Franc Congolais (FC)</span>
+      </a>
 
-            <div class="burger" id="burger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </header>
+      <nav id="main-nav" class="navbar" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="tokenomics.html">Tokenomics</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="ecosystem.html">Écosystème</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- ======== HERO AVEC PARTICLES ======== -->
+      <button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
     <section class="hero">
-        <div id="particles-js"></div>
+      <div class="hero-inner container">
+        <h1 class="hero-title">Franc Congolais (FC)</h1>
+        <p class="lead">La cryptomonnaie de la souveraineté numérique de la RDC — sécurité, communauté, adoption.</p>
 
-        <div class="hero-content">
-            <h1>FC Token</h1>
-            <p>Une nouvelle génération d’écosystème crypto — rapide, transparent et orienté communauté.</p>
-
-            <div class="hero-buttons">
-                <a href="tokenomics.html" class="btn-primary">Explorer le Token</a>
-                <a href="roadmap.html" class="btn-secondary">Voir la Roadmap</a>
-            </div>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tokenomics.html">Voir Tokenomics</a>
+          <a class="btn btn-outline" href="about.html">En savoir plus</a>
         </div>
+      </div>
     </section>
 
-    <!-- ======== SECTIONS ======== -->
-    <section class="features">
-        <h2>Pourquoi FC Token ?</h2>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Ultra Rapide</h3>
-                <p>Transactions optimisées et coûts réduits.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Sécurisé</h3>
-                <p>Smart contracts audités et standards modernes.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Communautaire</h3>
-                <p>Gouvernance et développement participatif.</p>
-            </div>
-        </div>
+    <!-- Overview -->
+    <section class="overview container">
+      <h2>Pourquoi FC ?</h2>
+      <p>FC vise à favoriser l'inclusion financière, les partenariats nationaux et la création d'un écosystème Web3 accessible.</p>
     </section>
+  </main>
 
-    <!-- ======== FOOTER ======== -->
-    <footer>
-        <p>© 2025 FC Token — Tous droits réservés</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Franc Congolais (FC). Tous droits réservés.</p>
+      <div class="socials">
+        <a href="#"><img src="assets/img/social/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="assets/img/social/telegram.svg" alt="Telegram"></a>
+        <a href="#"><img src="assets/img/social/github.svg" alt="GitHub"></a>
+      </div>
+    </div>
+  </footer>
 
-        <div class="socials">
-            <a href="#"><img src="assets/img/social-icons/twitter.svg" alt=""></a>
-            <a href="#"><img src="assets/img/social-icons/telegram.svg" alt=""></a>
-            <a href="#"><img src="assets/img/social-icons/github.svg" alt=""></a>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="assets/js/main.js"></script>
+  <!-- JS -->
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
