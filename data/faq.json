@@ -1,1 +1,106 @@
-{}
+{
+  "categories": [
+    {
+      "name": "Général",
+      "items": [
+        {
+          "question": "Qu'est-ce que le FC Token ?",
+          "answer": "FC (Franc Congolais Token) est un actif numérique conçu pour encourager l'adoption du Web3, la souveraineté numérique et l'inclusion financière en République Démocratique du Congo."
+        },
+        {
+          "question": "Le FC est-il une monnaie officielle ?",
+          "answer": "Non. Le FC Token n'est pas la monnaie légale de la RDC. Il s'agit d'un projet communautaire indépendant, destiné à l'innovation et aux solutions blockchain locales."
+        },
+        {
+          "question": "Sur quelle technologie repose FC ?",
+          "answer": "FC est développé sur une blockchain moderne, rapide et peu coûteuse, afin de garantir une adoption massive et accessible."
+        }
+      ]
+    },
+    {
+      "name": "Utilisation",
+      "items": [
+        {
+          "question": "Comment acheter du FC Token ?",
+          "answer": "Les utilisateurs pourront acheter du FC via des plateformes partenaires, un DEX (échange décentralisé), ou directement via l'application mobile lorsque celle-ci sera disponible."
+        },
+        {
+          "question": "Comment stocker le FC Token ?",
+          "answer": "Vous pouvez stocker vos tokens dans tout portefeuille compatible, tel que MetaMask, Trust Wallet ou l'application mobile FC Wallet (prochaine version)."
+        },
+        {
+          "question": "Où utiliser le FC Token ?",
+          "answer": "Le FC Token pourra être utilisé dans des services partenaires, des solutions de paiement locales, des programmes communautaires, et comme monnaie utilitaire dans l'écosystème Web3 FC."
+        }
+      ]
+    },
+    {
+      "name": "Tokenomics",
+      "items": [
+        {
+          "question": "Quelle est la quantité totale (supply) ?",
+          "answer": "La supply totale est fixe et définie dans le smart-contract. Une partie est réservée aux réserves, au développement, à la liquidité et aux partenariats stratégiques."
+        },
+        {
+          "question": "Y a-t-il un système de burn ?",
+          "answer": "Oui. Une portion des frais des transactions et des opérations internes est automatiquement brûlée afin de réduire l'offre en circulation."
+        },
+        {
+          "question": "Le FC Token est-il déflationniste ?",
+          "answer": "Oui. Grâce au mécanisme de burn et à la distribution optimisée, le FC Token suit une logique déflationniste contrôlée."
+        }
+      ]
+    },
+    {
+      "name": "Sécurité",
+      "items": [
+        {
+          "question": "Le smart-contract est-il audité ?",
+          "answer": "Une audit complète par un service tiers spécialisé en cybersécurité sera réalisée avant le lancement public afin de garantir la transparence et la fiabilité du projet."
+        },
+        {
+          "question": "Que faire en cas de perte de portefeuille ?",
+          "answer": "Comme tout actif Web3, la protection de vos clés privées est essentielle. Le projet proposera une documentation simple pour sensibiliser les utilisateurs débutants."
+        },
+        {
+          "question": "Comment éviter les arnaques ?",
+          "answer": "Ne faites confiance qu'aux liens officiels présents sur le site, GitHub, ou les réseaux officiels. Vérifiez systématiquement l'adresse du smart-contract avant de procéder à une transaction."
+        }
+      ]
+    },
+    {
+      "name": "Roadmap & Écosystème",
+      "items": [
+        {
+          "question": "Quand l'application mobile sera-t-elle disponible ?",
+          "answer": "Une première version du FC Wallet est prévue dans la phase 4 de la roadmap, incluant un portefeuille non-custodial, un swap intégré et un mode simplifié pour débutants."
+        },
+        {
+          "question": "Quelles sont les prochaines fonctionnalités ?",
+          "answer": "Le projet prévoit : une API FC pour l’intégration dans les services locaux, une solution de paiement pour commerces, un launchpad communautaire, et des outils éducatifs Web3."
+        },
+        {
+          "question": "Comment participer au développement ?",
+          "answer": "Le code source, les smart-contracts, la documentation et les contributions communautaires seront disponibles sur GitHub. Toute aide est la bienvenue."
+        }
+      ]
+    },
+    {
+      "name": "Team & Communauté",
+      "items": [
+        {
+          "question": "L'équipe est-elle publique ?",
+          "answer": "Oui. L'équipe publiera progressivement son identité, son parcours et ses partenaires dans une démarche de transparence professionnelle."
+        },
+        {
+          "question": "Comment rejoindre la communauté ?",
+          "answer": "Vous pouvez rejoindre nos communautés officielles sur Telegram, Twitter et Discord, et participer aux échanges, sondages et tests."
+        },
+        {
+          "question": "Puis-je contribuer au projet ?",
+          "answer": "Oui. Le projet est ouvert aux développeurs, designers, communicateurs et volontaires souhaitant participer au Web3 en RDC."
+        }
+      ]
+    }
+  ]
+}
