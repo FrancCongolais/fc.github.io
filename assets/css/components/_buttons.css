@@ -1,3 +1,224 @@
-.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:10px;font-weight:600;border:0;cursor:pointer}
-.btn-primary{background:var(--accent);color:var(--white)}
-.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
+/* ===================================================
+   COMPONENTS → BUTTONS
+   Boutons professionnels pour FC Token
+   =================================================== */
+
+:root {
+  --btn-radius: 10px;
+  --btn-padding: 0.85rem 1.8rem;
+  --btn-font-weight: 600;
+  --btn-transition: 0.25s ease;
+}
+
+/* ----- BASE BUTTON STYLE ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+
+  font-family: inherit;
+  font-weight: var(--btn-font-weight);
+  font-size: 1rem;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  transition: background var(--btn-transition),
+              color var(--btn-transition),
+              transform var(--btn-transition),
+              box-shadow var(--btn-transition);
+}
+
+/* Disable */
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  filter: grayscale(0.7);
+}
+
+/* ----- PRIMARY BUTTON (CTA) ----- */
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 238, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(0, 238, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.2);
+}
+
+/* ----- OUTLINE BUTTON ----- */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #0d0f16;
+  box-shadow: 0 0 12px rgba(0, 238, 255, 0.3);
+}
+
+/* ----- GHOST BUTTON (transparent) ----- */
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ----- DARK BUTTON (for light theme) ----- */
+.btn-dark {
+  background: #0d0f16;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.btn-dark:hover {
+  background: #11131d;
+}
+
+/* ----- LIGHT BUTTON (for dark theme) ----- */
+.btn-light {
+  background: #ffffff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.btn-light:hover {
+  background: #f4f4f4;
+}
+
+/* ----- BUTTON WITH ICONS ----- */
+.btn svg,
+.btn img {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.25));
+}
+
+.btn.icon-left svg { margin-right: .4rem; }
+.btn.icon-right svg { margin-left: .4rem; }
+
+/* ----- FULL WIDTH BUTTON ----- */
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+/* ----- SMALL / LARGE BUTTONS ----- */
+.btn-sm {
+  padding: 0.55rem 1.2rem;
+  font-size: .85rem;
+}
+
+.btn-lg {
+  padding: 1.15rem 2.4rem;
+  font-size: 1.15rem;
+  border-radius: 12px;
+}
+
+/* ----- BUTTON GLOW (NEON EFFECT) ----- */
+.btn-glow {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0,240,255,0.5);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 25px rgba(0,240,255,0.75);
+  transform: translateY(-3px);
+}
+
+/* ----- GRADIENT BUTTON ----- */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--accent), #7928ca);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(82, 57, 255, .45);
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, var(--accent-2), #9a3dff);
+  transform: translateY(-2px);
+}
+
+/* ----- ROUND BUTTON (icon only) ----- */
+.btn-round {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-round:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ----- SOCIAL BUTTONS ----- */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 0.8rem 1.4rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  transition: var(--btn-transition);
+}
+
+.btn-social:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+/* ----- LOADING STATE ----- */
+.btn.loading {
+  pointer-events: none;
+  opacity: .7;
+  position: relative;
+}
+
+.btn.loading::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  animation: spin 0.6s linear infinite;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 480px) {
+  .btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
