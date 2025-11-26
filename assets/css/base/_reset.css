@@ -1,0 +1,65 @@
+/* ============================================= */
+/*                 CSS RESET (PRO)               */
+/* ============================================= */
+
+/* Box model */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default body spacing */
+html, body {
+    height: 100%;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Smooth fonts */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Default images */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form styles */
+input, textarea, button, select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Remove default link underline */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Buttons consistent */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

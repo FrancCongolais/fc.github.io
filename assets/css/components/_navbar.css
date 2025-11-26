@@ -1,0 +1,184 @@
+/* ============================================= */
+/*         FC TOKEN – NAVBAR (CSS PRO)           */
+/* ============================================= */
+
+/* -------------- NAVBAR WRAPPER -------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    backdrop-filter: blur(14px);
+    background: rgba(10, 10, 15, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    transition: background 0.35s ease, height 0.35s ease;
+}
+
+/* Navbar shrink on scroll */
+.navbar.shrink {
+    height: 62px;
+    background: rgba(10, 10, 15, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ----------------- CONTAINER ----------------- */
+.navbar-container {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ----------------- LOGO ----------------- */
+.navbar-logo img {
+    height: 38px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 198, 255, 0.7));
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.06);
+}
+
+/* ----------------- MENU DESKTOP ----------------- */
+.nav-menu {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.nav-menu a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.3px;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: #00c6ff;
+    opacity: 0.85;
+}
+
+/* ----------------- CTA BUTTON ----------------- */
+.nav-cta {
+    padding: 0.55rem 1.2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0066ff);
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* ----------------- BURGER MENU MOBILE ----------------- */
+.burger {
+    width: 32px;
+    height: 22px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.burger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.35s ease;
+}
+
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 9px; }
+.burger span:nth-child(3) { top: 18px; }
+
+/* --- burger active animation --- */
+.burger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ----------------- MOBILE MENU ----------------- */
+.mobile-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 10, 20, 0.92);
+    backdrop-filter: blur(14px);
+    transform: translateX(100%);
+    transition: transform 0.45s cubic-bezier(0.18, 0.82, 0.45, 1);
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 9980;
+}
+
+.mobile-menu.active {
+    transform: translateX(0%);
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    transition: opacity 0.25s ease;
+}
+
+.mobile-menu a:hover {
+    opacity: 0.65;
+}
+
+/* ----------------- DARK MODE ----------------- */
+body.dark .navbar {
+    background: rgba(0, 0, 0, 0.38);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .nav-menu a {
+    color: #e0e0e0;
+}
+
+body.dark .nav-menu a:hover {
+    color: #00c6ff;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 70px;
+    }
+}

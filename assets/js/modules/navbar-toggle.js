@@ -1,0 +1,10 @@
+// navbar-toggle.js
+const btn = document.getElementById('nav-toggle');
+const nav = document.getElementById('main-nav');
+
+if (btn && nav) {
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  });
+}
