@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Typography */
+body {
+  font-family: 'Merriweather', 'Times New Roman', serif;
+  background-color: #0f172a;
+}
+
+h1, h2, h3, h4, h5, h6, nav, button, .font-serif {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}

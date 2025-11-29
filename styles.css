@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Typography */
+body {
+  font-family: 'Merriweather', 'Times New Roman', serif;
+  background-color: #0f172a; /* Slate 950 */
+  color: #f8fafc; /* Slate 50 */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, nav, button, .font-serif {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 300%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Utility classes */
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #fcd34d, #d97706); /* yellow-300 to yellow-600 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-blue-white {
+  background: linear-gradient(to right, #60a5fa, #ffffff, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
