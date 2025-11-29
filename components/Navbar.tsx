@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+// Importation explicite de l'image pour que Vite l'inclue dans le dossier dist
+import logoImg from '../assets/img/logo.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +10,9 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Handle Navbar transparency
       setScrolled(window.scrollY > 20);
 
-      // Handle Scroll Spy (Active Section)
       const sections = ['home', 'about', 'tokenomics', 'roadmap', 'media', 'whitepaper'];
-      // Offset to trigger activation slightly before the section hits the very top
       const scrollPosition = window.scrollY + 100; 
 
       for (const section of sections) {
@@ -50,7 +49,6 @@ const Navbar: React.FC = () => {
     const element = document.getElementById(targetId);
     
     if (element) {
-      // Calculate offset to account for fixed navbar height (approx 80px)
       const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
@@ -80,10 +78,9 @@ const Navbar: React.FC = () => {
             className="flex items-center gap-3 group cursor-pointer select-none"
             onClick={(e) => handleNavClick(e as any, '#home')}
           >
-             {/* Logo Image */}
-             <img src="assets/img/logo.png" alt="FC Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain drop-shadow-lg filter brightness-110" />
+             {/* Utilisation de la variable importée */}
+             <img src={logoImg} alt="FC Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain drop-shadow-lg filter brightness-110" />
              
-             {/* Text Container */}
              <div className="flex flex-col">
                 <span className="font-serif font-bold text-lg md:text-xl text-white tracking-wide leading-none">
                   FrancCongolais
